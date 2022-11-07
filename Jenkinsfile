@@ -31,7 +31,7 @@ pipeline{
             agent{label 'dockerAgent'}
             steps{
                 sh '''#!/bin/bash
-
+                    docker build -t url_shortener:v1 .
                 '''
             }
         }
@@ -39,7 +39,8 @@ pipeline{
             agent{label 'dockerAgent'}
             steps{
                 sh '''#!/bin/bash
-               
+                    docker tag url_shortener_app:v2 bikigrg/url_shortener:v1
+                    docker push bikigrg/url_shortener:v1
                 '''
             }
         }
