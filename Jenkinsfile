@@ -20,17 +20,18 @@ pipeline{
                 py.test --verbose --junit-xml test-reports/results.xml
                 '''
             }
-        }
-        post {
-            always {
-            junit 'test-reports/results.xml'
+            post {
+                always {
+                    junit 'test-reports/results.xml'
+                }
             }
         }
+        
         stage ('Create'){
             agent{label 'dockerAgent'}
             steps{
                 sh '''#!/bin/bash
-                    
+
                 '''
             }
         }
