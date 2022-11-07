@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub-cred-biki')
+	    DOCKERHUB_CREDENTIALS=credentials('dockerhub-cred-biki')
 	}
     stages {
         stage ('Build') {
@@ -44,8 +44,8 @@ pipeline{
             steps{
                 sh '''#!/bin/bash
                     echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
-                    docker tag url_shortener_app:v2 bikigrg/url_shortener:v1
-                    docker push bikigrg/url_shortener:v1
+                    sudo docker tag url_shortener_app:v2 bikigrg/url_shortener:v1
+                    sudo docker push bikigrg/url_shortener:v1
                 '''
             }
         }
