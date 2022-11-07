@@ -32,7 +32,7 @@ pipeline{
             agent{label 'dockerAgent'}
             steps{
                 sh '''#!/bin/bash
-                    docker build -t url_shortener:v1 .
+                    sudo docker build -t url_shortener:v1 .
                 '''
             }
         }
