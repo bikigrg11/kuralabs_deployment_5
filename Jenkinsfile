@@ -43,6 +43,7 @@ pipeline{
             agent{label 'dockerAgent'}
             steps{
                 sh '''#!/bin/bash
+                    sudo docker logout
                     echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
                     sudo docker tag url_shortener:v1 bikigrg/url_shortener:v1
                     sudo docker push bikigrg/url_shortener:v1
