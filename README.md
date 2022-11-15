@@ -56,11 +56,11 @@ Pipeline Diagram:	10 <br>
 
 <h2>CI/CD Pipeline Diagram:</h2>
 
-Link: [https://github.com/bikigrg11/kuralabs_deployment_4/blob/main/deployment4.jpg]
+Link: https://github.com/bikigrg11/kuralabs_deployment_5/blob/main/System%20Design/system%20design.jpg
 
 <br>
 <hr>
-<img src="https://github.com/bikigrg11/kuralabs_deployment_4/blob/main/deployment4.jpg">
+<img src="https://github.com/bikigrg11/kuralabs_deployment_5/blob/main/System%20Design/system%20design.jpg">
 <hr>
 
 
